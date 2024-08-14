@@ -1,0 +1,153 @@
+:root {
+    --transparent: hsla(0, 0%, 100%, .5);
+    --outlinelight: yellow;
+    --outlinedark: blue;
+    --lightgrey: #D3D9D4;
+    --whitetransparent: hsla(0, 0%, 100%, 0.85);
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-image: url('./assets/redblue.jpg');
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    color: var(--whitetransparent);
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: var(--transparent);
+    margin-bottom: 20px;
+    border: 1px solid var(--outlinelight);
+    border-radius: 5px;
+}
+
+.dropdown {
+    width: 225px;
+    /* font-weight: bolder; */
+}
+
+
+.images-elements {
+    border: 1px solid var(--outlinelight);
+    border-radius: 5px;
+    background-color: var(--transparent);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.image-card {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    margin: 5px;
+    background-color: white;
+}
+
+.image-card img {
+    max-width: 150px;
+    object-fit: contain;
+    cursor: pointer;
+    padding: 10px;
+}
+
+img:hover {
+    border: 3px solid var(--outlinelight);
+    border-radius: 5px;
+    min-width: 300px;
+}
+
+.switch {
+    width: 100px;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.menu-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    padding-bottom: 0px;
+    flex-wrap: wrap;
+}
+
+.menu-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    flex-wrap: wrap;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border: 3px solid var(--outlinelight);
+    border-radius: 5px;
+    background-color: var(--transparent);
+}
+
+.canvas {
+    background-color: white;
+}
+
+.menu {
+    background-color: var(--transparent);
+    border-radius: 5px;
+    border: 1px solid var(--outlinelight);
+}
+
+#close-button {
+    /* border: 1px solid red; */
+    /* border-radius: 5px; */
+    margin-right: 10px;
+    /* padding: 5px; */
+}
+
+button {
+    border: 1px solid var(--outlinelight);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    background-color: var(--whitetransparent);
+}
+
+button:hover {
+    background-color: var(--transparent);
+    border: 1px solid var(--outlinedark);
+}
