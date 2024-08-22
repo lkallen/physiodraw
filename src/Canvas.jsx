@@ -71,12 +71,17 @@ return (
                   unCheckedChildren={"ERASING"}
             />
           </div>
+
           <label htmlFor="color">Color</label>
             <input
               type="color"
               value={strokeColor}
               onChange={handleStrokeColorChange}
           />
+
+
+      <div className='button-group'>
+
           <button
               type="button"
               className="btn btn-sm btn-outline-primary"
@@ -98,42 +103,62 @@ return (
             >
               Clear
           </button>
+
+
+
+      </div>
+
+
+          
+
+
       </div>
 
       <br></br>
 
       <div className='menu-slider-container'>
-        <label htmlFor="strokeWidth" className="form-label">
+
+        <div className='stroke'>
+          <label htmlFor="strokeWidth" className="form-label">
             Stroke Width
           </label>
-          <input
-            // disabled={eraseMode}
-            type="range"
-            className="form-range"
-            min="1"
-            max="20"
-            step="1"
-            id="strokeWidth"
-            value={strokeWidth}
-            onChange={handleStrokeWidthChange}
-          />
+            <input
+              type="range"
+              className="form-range"
+              min="1"
+              max="20"
+              step="1"
+              id="strokeWidth"
+              value={strokeWidth}
+              onChange={handleStrokeWidthChange}
+            />
+
+        </div>
+
+        <div className='eraser'>
+          <label htmlFor="eraserWidth" className="form-label">
+              Eraser Width
+          </label>
+            <input
+              // disabled={!eraseMode}
+              type="range"
+              className="form-range"
+              min="1"
+              max="20"
+              step="1"
+              id="eraserWidth"
+              value={eraserWidth}
+              onChange={handleEraserWidthChange}
+            />
+
+
+        </div>
+
+
         
         <br></br>
         
-        <label htmlFor="eraserWidth" className="form-label">
-            Eraser Width
-          </label>
-          <input
-            // disabled={!eraseMode}
-            type="range"
-            className="form-range"
-            min="1"
-            max="20"
-            step="1"
-            id="eraserWidth"
-            value={eraserWidth}
-            onChange={handleEraserWidthChange}
-          />
+
 
       </div>
 
@@ -147,7 +172,6 @@ return (
   <ReactSketchCanvas 
     className='canvas'
     ref={canvasRef}
-    // width="75%"
     height="450px"
     canvasColor="transparent"
     strokeColor={strokeColor}
