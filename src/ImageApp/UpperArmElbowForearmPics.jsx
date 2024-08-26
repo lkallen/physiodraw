@@ -46,6 +46,7 @@ export default function UpperArmElbowForearmPics(props) {
                 // onClick={() => handleClick(pic.id)}
                 onClick={() => clickImage()}
                 src={pic.url} 
+                alt='anatomy image' 
             />
         </div>
     ))

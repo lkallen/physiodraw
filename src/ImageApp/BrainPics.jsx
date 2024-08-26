@@ -46,7 +46,8 @@ export default function BrainPics(props) {
                 // onClick={() => handleClick(pic.id)}
                 onClick={() => clickImage()}
                 // width="50%" height="50%" 
-                src={pic.url} 
+                src={pic.url}
+                alt='anatomy image' 
             />
         </div>
     ))
